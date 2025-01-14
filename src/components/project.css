@@ -1,0 +1,42 @@
+.projects-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-item {
+  width: 45%; /* Adjust width for the columns */
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #4ffc38;
+}
+
+.project-details {
+  margin-top: 15px;
+  text-align: left;
+}
+
+iframe {
+  border: none;
+  border-radius: 5px;
+}

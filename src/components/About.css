@@ -1,0 +1,43 @@
+.about-container {
+  text-align: center;
+  color: rgb(240, 245, 241);
+  margin: 20px auto;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 80%; /* Makes the image circular */
+  margin: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+}
+
+.about-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.about-column {
+  flex: 1;
+  margin: 0 10px;
+  background: rgba(8, 7, 7, 0.932); /* Light overlay for columns */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.about-column h3 {
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+  color: hsl(115, 100%, 52%);
+}
+
+.about-column p {
+  margin: 5px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}

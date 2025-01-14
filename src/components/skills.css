@@ -1,0 +1,44 @@
+/* General container styling */
+.skills-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading styling */
+.skills-container h2 {
+  font-size: 2.5rem;
+  color: #3af70a;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Individual skill item styling */
+.skill-item {
+  background-color: #0a0808;
+  border: 1px solid #23f707;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #e7eee8;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Hover effect for skill items */
+.skill-item:hover {
+  background-color: #3e09fd;
+  color: #f2faf2ec;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,56 @@
+.educational-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .educational-container h2 {
+    font-size: 2rem;
+    color: #16ec0f;
+    margin-bottom: 20px;
+  }
+  
+  .educational-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .educational-column {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusts column width to 1/3 of the container */
+    background: #110f0f;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .educational-column h3 {
+    font-size: 1.5rem;
+    color: #05e22a;
+    margin-bottom: 10px;
+  }
+  
+  .educational-column p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .educational-column a {
+    text-decoration: none;
+    color: #e8f0f5; /* Link color */
+  }
+  
+  .educational-column a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .educational-column {
+      flex: 1 1 100%; /* Stacks columns on smaller screens */
+    }
+  }
+  
