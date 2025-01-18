@@ -1,7 +1,7 @@
 import React from 'react';
-import './educational_background.css'; // Importing CSS for styling
+import './educationalbackground.css'; // Importing CSS for styling
 
-const Educational_background = () => {
+const Educationalbackground = () => {
   return (
     <div className="educational-container">
       <h2>Educational Background</h2>
@@ -33,4 +33,4 @@ const Educational_background = () => {
   );
 };
 
-export default Educational_background;
+export default Educationalbackground;

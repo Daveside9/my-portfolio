@@ -5,7 +5,7 @@ import Skills from './components/Skills';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Certificates from './components/Certificates';
-import Educational_background from './components/Educational_background';
+import Educationalbackground from './components/Educationalbackground';
 import './App.css';
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
               <li><a href="/project">Project</a></li>
               <li><a href="/contact">Contact</a></li>
               <li><a href="/certificates">Certificates</a></li>
-              <li><a href="/educational_background">Educational Background</a></li>
+              <li><a href="/educationalbackground">EducationalBackground</a></li>
             </ul>
           </nav>
         </header>
@@ -31,7 +31,7 @@ const App = () => {
           <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/certificates" element={<Certificates />} />
-          <Route path="/educational_background" element={<Educational_background />} />
+          <Route path="/educationalbackground" element={<Educationalbackground />} />
         </Routes>
       </div>
     </Router>
