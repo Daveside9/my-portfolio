@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project';
@@ -12,19 +12,21 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        {/* Updated Navigation with React Router's Link */}
         <header className="nav-header">
           <nav>
             <ul>
-              <li><a href="/about">About</a></li>
-              <li><a href="/skills">Skills</a></li>
-              <li><a href="/project">Project</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/certificates">Certificates</a></li>
-              <li><a href="/educationalbackground">EducationalBackground</a></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/skills">Skills</Link></li>
+              <li><Link to="/project">Project</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/certificates">Certificates</Link></li>
+              <li><Link to="/educationalbackground">EducationalBackground</Link></li>
             </ul>
           </nav>
         </header>
 
+        {/* Routes for Navigation */}
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
