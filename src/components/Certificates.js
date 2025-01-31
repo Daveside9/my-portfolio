@@ -36,7 +36,7 @@ const Certificates = () => {
           {openCertificate === 'backendCertificate' && (
             <div className="certificate-details">
               <img
-                src="https://intranet.alxswe.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa2NWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a06df7bec51751bd62f44d057116bbccd5bba605/17-short-specializations-certificate-joel-david.png"
+                src={`${process.env.PUBLIC_URL}/certificates/backend_cer.png`} // Path to your local certificate
                 alt="Backend Certificate"
                 className="certificate-image"
               />

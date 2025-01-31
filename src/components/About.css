@@ -9,10 +9,10 @@
 }
 
 .profile-picture {
-  width: 300px; /* Adjust size */
-  height: 150px;
-  border-radius: 50%; /* Makes it circular */
-  margin: 30px 0;
+  width: 500px; /* Adjust size */
+  height: 500px;
+  border-radius: 75%; /* Makes it circular */
+  margin: 80px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   
   /* Animation */
