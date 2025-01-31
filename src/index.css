@@ -6,27 +6,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Additional styling for code block */
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-<<<<<<< HEAD
-=======
-}
-
-/* Mobile responsiveness for body */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px; /* Adjust font size for readability on mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 14px; /* Adjust font size further for very small screens */
-  }
->>>>>>> 1a6733732b54daaeff15a7b2888665f3b8f4c11e
-}
-
 /* Mobile responsiveness for body */
 @media (max-width: 768px) {
   body {

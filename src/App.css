@@ -57,14 +57,15 @@ body {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+{
   /* Navbar styling on smaller screens */
   .nav-header ul {
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
-
+}
   .nav-header li {
     margin: 10px 0;
   }
@@ -77,24 +78,7 @@ body {
   .profile-picture {
     width: 50px; /* Adjust size for mobile */
     height: 50px;
-<<<<<<< HEAD
-=======
   }
-}
-
-@media (max-width: 480px) {
-  /* Further adjust profile picture size for very small screens */
-  .profile-picture {
-    width: 40px; /* Even smaller size for very small screens */
-    height: 40px;
-  }
-
-  /* Further adjust font size for very small screens */
-  .nav-header a {
-    font-size: 1.2rem; /* Reduce font size */
->>>>>>> 1a6733732b54daaeff15a7b2888665f3b8f4c11e
-  }
-}
 
 @media (max-width: 480px) {
   /* Further adjust profile picture size for very small screens */
