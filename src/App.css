@@ -1,8 +1,9 @@
+/* Global styles */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-image: url('https://static.vecteezy.com/system/resources/previews/013/102/567/non_2x/modern-globe-world-map-holographic-projector-on-technology-background-vector.jpg');
-  background-size: cover; /* Ensures the image covers the entire background */
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #8bf171;
@@ -46,26 +47,25 @@ body {
 
 /* Profile picture styling */
 .profile-picture {
-  width: 75px; /* Fixed smaller width */
-  height: 75px; /* Keep it square */
-  object-fit: cover; /* Ensures the image fits into the square without distortion */
-  border-radius: 50%; /* Makes the image a perfect circle */
-  border: 2px solid #e271f1; /* Adds a decorative border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for a nice effect */
-  margin: 20px auto; /* Centers the image with margin spacing */
-  display: block; /* Centers the image in block layout */
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e271f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  display: block;
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) 
-{
+@media (max-width: 768px) {
   /* Navbar styling on smaller screens */
   .nav-header ul {
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
-}
+
   .nav-header li {
     margin: 10px 0;
   }
@@ -79,6 +79,7 @@ body {
     width: 50px; /* Adjust size for mobile */
     height: 50px;
   }
+}
 
 @media (max-width: 480px) {
   /* Further adjust profile picture size for very small screens */
@@ -90,5 +91,9 @@ body {
   /* Further adjust font size for very small screens */
   .nav-header a {
     font-size: 1.2rem; /* Reduce font size */
+  }
+
+  body {
+    font-size: 14px; /* Adjust font size for very small screens */
   }
 }
