@@ -16,8 +16,13 @@ const Contact = () => {
           LinkedIn: <a href="https://www.linkedin.com/in/joel-david-239383206/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/joel-david</a>
         </li>
         <li>
+<<<<<<< HEAD
           <FaGithub className="contact-icon" />
           GitHub: <a href="https://github.com/Daveside9" target="_blank" rel="noopener noreferrer">Daveside9</a>
+=======
+          <Fagithub className="contact-icon" />
+          Github: <a href="github:https://github.com/Daveside9">https://github.com/Daveside9</a>
+>>>>>>> 1a6733732b54daaeff15a7b2888665f3b8f4c11e
         </li>
       </ul>
     </div>

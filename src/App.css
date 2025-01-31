@@ -77,6 +77,22 @@ body {
   .profile-picture {
     width: 50px; /* Adjust size for mobile */
     height: 50px;
+<<<<<<< HEAD
+=======
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust profile picture size for very small screens */
+  .profile-picture {
+    width: 40px; /* Even smaller size for very small screens */
+    height: 40px;
+  }
+
+  /* Further adjust font size for very small screens */
+  .nav-header a {
+    font-size: 1.2rem; /* Reduce font size */
+>>>>>>> 1a6733732b54daaeff15a7b2888665f3b8f4c11e
   }
 }
 
