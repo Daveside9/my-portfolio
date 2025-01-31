@@ -17,7 +17,7 @@ const Contact = () => {
         </li>
         <li>
           <Fagithub className="contact-icon" />
-          github: <a href="github:https://github.com/Daveside9">https://github.com/Daveside9</a>
+          Github: <a href="github:https://github.com/Daveside9">https://github.com/Daveside9</a>
         </li>
       </ul>
     </div>
