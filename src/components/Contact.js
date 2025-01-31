@@ -16,8 +16,8 @@ const Contact = () => {
           LinkedIn: <a href="https://www.linkedin.com/in/joel-david-239383206/" target="_blank" rel="noopener noreferrer">Joel David</a>
         </li>
         <li>
-          <FaPhoneAlt className="contact-icon" />
-          Phone: <a href="github:https://github.com/Daveside9">https://github.com/Daveside9</a>
+          <Fagithub className="contact-icon" />
+          github: <a href="github:https://github.com/Daveside9">https://github.com/Daveside9</a>
         </li>
       </ul>
     </div>
