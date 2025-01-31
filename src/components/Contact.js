@@ -17,7 +17,7 @@ const Contact = () => {
         </li>
         <li>
           <FaPhoneAlt className="contact-icon" />
-          Phone: <a href="tel:08108546368">08108546368</a>
+          Phone: <a href="github:https://github.com/Daveside9">https://github.com/Daveside9</a>
         </li>
       </ul>
     </div>
