@@ -17,21 +17,20 @@ const About = () => {
           <h3>Personal Details</h3>
           <p><strong>Date of Birth:</strong> November 28, 1992</p>
           <p><strong>Nationality:</strong> Nigerian</p>
-          <p><strong>State of Residence:</strong>kaduna</p>
-          <p><strong>LGA:</strong>chukun</p>
-          <p><strong>sex:</strong>male</p>
+          <p><strong>State of Residence:</strong> kaduna</p>
+          <p><strong>LGA:</strong> chukun</p>
+          <p><strong>sex:</strong> male</p>
           <p><strong>Languages:</strong>jaba, koro, English</p>
-          <p><strong>Marital statues:</strong>single</p>
-          <p><strong>Interest:</strong>Sport, Learning</p>
-          <p><strong>Education:</strong>jupavi secondary school,
+          <p><strong>Marital statues:</strong> single</p>
+          <p><strong>Interest:</strong> Sport, Learning</p>
+          <p><strong>Education:</strong> jupavi secondary school,
           waec 2010</p>
-          <p><strong>tribe:</strong>jaba</p>
-          <p><strong>tribe:</strong>jaba</p>
+          <p><strong>tribe:</strong> jaba</p>
         </div>
         <div className="about-column">
           <h3>meet me</h3>
           <p>
-          I am a highly motivated and results-driven software developer specializing in back-end technologies, particularly Python. My expertise spans across building scalable and efficient systems, designing user-focused solutions, and delivering innovative projects with precision and creativity. I am well-versed in modern frameworks and methodologies, enabling me to craft solutions that meet both technical and business requirements.
+          I am a motivated and results-driven software developer specializing in back-end technologies, particularly Python. My expertise spans across building scalable and efficient systems, designing user-focused solutions, and delivering innovative projects with precision and creativity. I am well-versed in modern frameworks and methodologies, enabling me to craft solutions that meet both technical and business requirements.
 
 In addition to my technical skills, I have a strong background as a business analyst, pitch deck developer, and business plan strategist. This unique combination allows me to bridge the gap between technology and business, delivering comprehensive insights and strategies that drive success. My ability to translate complex technical concepts into actionable plans has proven invaluable in diverse team settings.
 

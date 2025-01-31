@@ -44,9 +44,10 @@ body {
   color: #7d1cd8;
 }
 
+/* Profile picture styling */
 .profile-picture {
   width: 75px; /* Fixed smaller width */
-  height: 50px; /* Fixed smaller height to make it square */
+  height: 75px; /* Keep it square */
   object-fit: cover; /* Ensures the image fits into the square without distortion */
   border-radius: 50%; /* Makes the image a perfect circle */
   border: 2px solid #e271f1; /* Adds a decorative border */
@@ -55,10 +56,39 @@ body {
   display: block; /* Centers the image in block layout */
 }
 
-/* Responsive Design for Smaller Screens */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
+  /* Navbar styling on smaller screens */
+  .nav-header ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-header li {
+    margin: 10px 0;
+  }
+
+  .nav-header a {
+    font-size: 1.5rem; /* Reduce font size for mobile */
+  }
+
+  /* Profile picture on smaller screens */
   .profile-picture {
-    width: 15px; /* Smaller size for mobile devices */
-    height: 7px;
+    width: 50px; /* Adjust size for mobile */
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust profile picture size for very small screens */
+  .profile-picture {
+    width: 40px; /* Even smaller size for very small screens */
+    height: 40px;
+  }
+
+  /* Further adjust font size for very small screens */
+  .nav-header a {
+    font-size: 1.2rem; /* Reduce font size */
   }
 }

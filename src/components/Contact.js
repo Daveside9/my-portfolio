@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaLinkedin, FaPhoneAlt } from 'react-icons/fa'; // Importing icons
+import { FaEnvelope, FaLinkedin, FaPhoneAlt, FaGithub } from 'react-icons/fa'; // Importing icons
 import './contact.css'; // Importing CSS for styling
 
 const Contact = () => {
@@ -13,11 +13,11 @@ const Contact = () => {
         </li>
         <li>
           <FaLinkedin className="contact-icon" />
-          LinkedIn: <a href="https://www.linkedin.com/in/joel-david-239383206/" target="_blank" rel="noopener noreferrer">Joel David</a>
+          LinkedIn: <a href="https://www.linkedin.com/in/joel-david-239383206/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/joel-david</a>
         </li>
         <li>
-          <FaPhoneAlt className="contact-icon" />
-          Phone: <a href="tel:08108546368">08108546368</a>
+          <FaGithub className="contact-icon" />
+          GitHub: <a href="https://github.com/Daveside9" target="_blank" rel="noopener noreferrer">Daveside9</a>
         </li>
       </ul>
     </div>

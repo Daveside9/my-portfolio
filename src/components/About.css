@@ -1,6 +1,6 @@
 .about-container {
   text-align: center;
-  color: rgb(240, 245, 241);
+  color: rgb(11, 231, 55);
   margin: 20px auto;
   max-width: 800px;
   background: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent background */
@@ -9,11 +9,28 @@
 }
 
 .profile-picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 80%; /* Makes the image circular */
+  width: 300px; /* Adjust size */
+  height: 150px;
+  border-radius: 50%; /* Makes it circular */
   margin: 30px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+  /* Animation */
+  opacity: 0; 
+  transform: scale(0.8); /* Start smaller */
+  animation: fadeInZoom 1s ease-in-out forwards;
+}
+
+/* Define the animation */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .about-details {

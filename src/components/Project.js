@@ -54,25 +54,23 @@ const Project = () => {
       ),
     },
     {
-      id: 'myScrapeFlow',
-      title: 'My Scrape Flow',
+      id: 'valentineProject',
+      title: 'Valentine Booking System',
       content: (
         <div>
           <p>
-          This project is a web scraper that extracts quotes and analyzes them. It uses:
+            A simple and elegant Valentine's Day picnic/dinner booking system. Users can reserve couple hangout spaces easily.
           </p>
-              <ul>
-                <li><strong>BeautifulSoup</strong> for scraping quotes from a website</li>
-                <li><strong>Pandas</strong> for analyzing data</li>
-                <li><strong>Flask</strong> to display scraped and analyzed results</li>
-                <li><strong>Matplotlib</strong> for data visualization</li>
-              </ul>
-              <a href="http://127.0.0.1:5000" target="_blank" rel="noopener noreferrer">
-            Launch My Scrape Flow
+          <a href="https://github.com/Daveside9/valentine-booking" target="_blank" rel="noopener noreferrer">
+            Visit Valentine Booking System
+          </a>
+          <br />
+          <a href="https://github.com/Daveside9/valentine-booking" target="_blank" rel="noopener noreferrer">
+            View Source Code
           </a>
         </div>
       ),
-    },
+    },    
     {
       id: 'grainPriceTracker',
       title: 'Grain Price Tracker',
