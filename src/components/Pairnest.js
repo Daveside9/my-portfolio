@@ -1,32 +1,30 @@
 import React from 'react';
-import './Pairnest.css';
+import './Pairnest.css'; // Optional: create a CSS file to style this
 
 const Pairnest = () => {
   return (
-    <div className="pairnest-container">
-      <h2>💘 Pairnest – Smart Love Matching App</h2>
+    <div className="project-card">
+      <h2>💞 PairNest</h2>
       <p>
-        Pairnest is a modern matchmaking web application that uses interest compatibility,
-        facial verification, and admin moderation to connect genuine users. It includes
-        real-time updates, Google Sign-In, secure authentication, and user-friendly dashboards.
+        PairNest is a love-pairing platform that intelligently matches users based on interests,
+        personality, and verification. Features include secure login, facial recognition, thumbprint authentication, admin dashboard, and real-time matchmaking.
       </p>
-
-      <div className="pairnest-buttons">
+      <div className="buttons">
         <a
           href="https://pairnest.onrender.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn live"
+          className="btn live-btn"
         >
-          🌐 Visit App
+          🌐 View Live Site
         </a>
         <a
           href="https://github.com/Daveside9/PairNest"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn github"
+          className="btn github-btn"
         >
-          🔗 GitHub Repo
+          💻 GitHub Repo
         </a>
       </div>
     </div>
