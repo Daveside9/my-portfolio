@@ -3,6 +3,7 @@ import './project.css'; // Optional CSS for styling
 import WeatherApp from './WeatherApp';
 import ImageEditor from './ImageEditor';
 import PasswordManager from '../components/PasswordManager';
+import Pairnest from './components/Pairnest';
 
 const Project = () => {
   // State to track which project is currently open
