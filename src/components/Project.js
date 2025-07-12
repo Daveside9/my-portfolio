@@ -64,25 +64,28 @@ function PortfolioPage() {
         <li>💬 User notifications & WebSocket updates</li>
         <li>🌙 Fully responsive with dark/light themes</li>
       </ul>
-      <a
-        href="https://pairnest-1.onrender.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        View Source Code
-      </a>
-      <br />
-      {/* Optional live demo link */}
-      {/* <a
-        href="https://github.com/Daveside9/pairnest"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Live Demo
-      </a> */}
+      <div className="buttons">
+        <a
+          href="https://pairnest.onrender.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn live-btn"
+        >
+          🌐 View Live Site
+        </a>
+        <a
+          href="https://github.com/Daveside9/PairNest"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn github-btn"
+        >
+          💻 GitHub Repo
+        </a>
+      </div>
     </div>
   ),
 },
+
     {
       id: 'weatherApp',
       title: 'Weather App',
