@@ -37,6 +37,41 @@ const Project = () => {
       ),
     },
     {
+  id: 'pairnest',
+  title: 'Pairnest – Love Pairing Platform',
+  content: (
+    <div>
+      <p>
+        Pairnest is a secure matchmaking app that matches users based on interest compatibility
+        and preferences. It includes facial verification, thumbprint biometric login, booking system,
+        and real-time admin monitoring dashboard.
+      </p>
+      <ul>
+        <li>🔐 Facial + biometric authentication</li>
+        <li>📊 Real-time admin dashboard with ban/edit/search</li>
+        <li>💬 User notifications & WebSocket updates</li>
+        <li>🌙 Fully responsive with dark/light themes</li>
+      </ul>
+      <a
+        href="https://pairnest-1.onrender.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Source Code
+      </a>
+      <br />
+      {/* Optional live demo link */}
+      {/* <a
+        href="https://github.com/Daveside9/pairnest"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Live Demo
+      </a> */}
+    </div>
+  ),
+},
+    {
       id: 'weatherApp',
       title: 'Weather App',
       content: <WeatherApp />,
