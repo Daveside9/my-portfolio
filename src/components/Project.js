@@ -3,6 +3,7 @@ import './project.css'; // Optional CSS for styling
 import WeatherApp from './WeatherApp';
 import ImageEditor from './ImageEditor';
 import PasswordManager from '../components/PasswordManager';
+import Pairnest from './components/Pairnest';
 
 const Project = () => {
   // State to track which project is currently open
@@ -36,6 +37,17 @@ const Project = () => {
         ></iframe>
       ),
     },
+
+function PortfolioPage() {
+  return (
+    <div>
+      <h1>My Projects</h1>
+      <Pairnest />
+      {/* other projects... */}
+    </div>
+  );
+}
+      
     {
   id: 'pairnest',
   title: 'Pairnest – Love Pairing Platform',
@@ -76,18 +88,7 @@ const Project = () => {
       title: 'Weather App',
       content: <WeatherApp />,
     },
-    {
-      id: 'fastAPI',
-      title: 'FastAPI Project',
-      content: (
-        <div>
-          <p>This is a REST API built with FastAPI. You can test the API and explore the features it provides.</p>
-          <a href="http://127.0.0.1:8000" target="_blank" rel="noopener noreferrer">
-            Visit FastAPI Project
-          </a>
-        </div>
-      ),
-    },
+      
     {
       id: 'valentineProject',
       title: 'Valentine Booking System',
