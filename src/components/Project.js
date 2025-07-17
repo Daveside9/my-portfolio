@@ -90,11 +90,11 @@ const Project = () => {
           <p>
             A simple and elegant Valentine's Day picnic/dinner booking system. Users can reserve couple hangout spaces easily.
           </p>
-          <a href="https://github.com/Daveside9/valentine-booking" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Daveside9/valentine" target="_blank" rel="noopener noreferrer">
             Visit Valentine Booking System
           </a>
           <br />
-          <a href="https://github.com/Daveside9/valentine-booking" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Daveside9/valentine" target="_blank" rel="noopener noreferrer">
             View Source Code
           </a>
         </div>
