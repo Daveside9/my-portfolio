@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import './project.css'; // Optional CSS for styling
+import './project.css';
 import WeatherApp from './WeatherApp';
 import ImageEditor from './ImageEditor';
 import PasswordManager from '../components/PasswordManager';
 import Pairnest from '../components/Pairnest';
 
 const Project = () => {
-  // State to track which project is currently open
   const [openProject, setOpenProject] = useState(null);
 
-  // Project details to simplify rendering
   const projects = [
     {
       id: 'businessPlan',
@@ -38,7 +36,7 @@ const Project = () => {
       ),
     },
     
-  {
+{
   id: 'pairnest',
   title: 'Pairnest – Love Pairing Platform',
   content: (
@@ -56,14 +54,6 @@ const Project = () => {
       </ul>
       <div className="buttons">
         <a
-          href="https://pairnest.onrender.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn live-btn"
-        >
-          🌐 View Live Site
-        </a>
-        <a
           href="https://github.com/Daveside9/PairNest"
           target="_blank"
           rel="noopener noreferrer"
@@ -71,75 +61,92 @@ const Project = () => {
         >
           💻 GitHub Repo
         </a>
+     <a
+          href="https://go.screenpal.com/watch/cTj23nn2opJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn demo-btn"
+        >
+          ▶ Demo Video
+        </a>
       </div>
     </div>
   ),
 },
 
-    {
-      id: 'weatherApp',
-      title: 'Weather App',
-      content: <WeatherApp />,
-    },
-      
-    {
-      id: 'valentineProject',
-      title: 'Valentine Booking System',
-      content: (
-        <div>
-          <p>
-            A simple and elegant Valentine's Day picnic/dinner booking system. Users can reserve couple hangout spaces easily.
-          </p>
-          <a href="https://github.com/Daveside9/valentine" target="_blank" rel="noopener noreferrer">
-            Visit Valentine Booking System
-          </a>
-          <br />
-          <a href="https://github.com/Daveside9/valentine" target="_blank" rel="noopener noreferrer">
-            View Source Code
-          </a>
-        </div>
-      ),
-    },    
-    {
-      id: 'grainPriceTracker',
-      title: 'Grain Price Tracker',
-      content: (
-        <div>
-          <p>
-            This web application tracks grain prices (such as Rice, Ginger, Maize, and Cocoa) in Nigeria. Users can monitor and analyze
-            prices dynamically.
-          </p>
-          <a href="https://github.com/Daveside9/grain-data-price">
-            Visit Grain Price Tracker
-          </a>
-        </div>
-      ),
-    },
-    {
-      id: 'imageEditor',
-      title: 'Image Editor',
-      content: <ImageEditor />,
-    },
-    {
-      id: 'passwordManager',
-      title: 'Password Manager',
-      content: <PasswordManager />,
-    },
-    {
-      id: 'expenseTracker',
-      title: 'Expense Tracker',
-      content: (
-        <div>
-          <p>This is a web application that helps track your expenses, featuring a dashboard to add and manage expenses.</p>
-          <a href="http://yourprojectlink.com" target="_blank" rel="noopener noreferrer">
-            Visit Project
-          </a>
-        </div>
-      ),
-    },
-  ];
+ {
+  id: 'valentineBooking',
+  title: 'Valentine Booking System',
+  content: (
+    <div>
+      <p>
+        A simple and elegant Valentine's Day picnic/dinner booking system. Users can reserve couple hangout spaces easily with seamless navigation and responsive design.
+      </p>
+      <ul>
+        <li>❤️ Reserve picnic or dinner dates effortlessly</li>
+        <li>🗓 Real-time availability tracking</li>
+        <li>💌 Confirmation notifications</li>
+        <li>📱 Mobile-first, responsive UI</li>
+      </ul>
+      <div className="buttons">
+        <a
+          href="https://github.com/Daveside9/valentine"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn github-btn"
+        >
+          💻 GitHub Repo
+        </a>
+        <a
+          href="https://go.screenpal.com/watch/cTjb0in2YWq"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn demo-btn"
+        >
+          ▶ View Demo / Source
+        </a>
+      </div>
+    </div>
+  ),
+},
 
-  // Toggle the open/close state of a project
+{
+  id: 'NaijaHavest',
+  title: 'NaijaHavest Web App',
+  content: (
+    <div>
+      <p>
+        A Django-powered communication system that allows farmers to upload their farm produce in a reserved farmers dashboard with the aim that users will buy their produce. Built with role-based authentication, Django Admin integration, and responsive design.
+      </p>
+      <ul>
+        <li>📩 Farmers upload farm produce</li>
+        <li>📊 Admin dashboard to manage the backends</li>
+        <li>🔍 Search and filter messages by subject or sender</li>
+        <li>📱 Fully responsive and mobile-friendly UI</li>
+      </ul>
+      <div className="buttons">
+        <a
+          href="https://github.com/Daveside9/NaijaHarvest"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn github-btn"
+        >
+          💻 GitHub Repo
+        </a>
+        <a
+          href="https://go.screenpal.com/watch/cTj2rLn2okL"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn demo-btn"
+        >
+          ▶ Demo Video
+        </a>
+      </div>
+    </div>
+  ),
+},
+ 
+];
   const toggleProject = (projectId) => {
     setOpenProject(openProject === projectId ? null : projectId);
   };
