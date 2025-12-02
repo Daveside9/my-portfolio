@@ -8,7 +8,7 @@
   
   .contact-container h2 {
     font-size: 2rem;
-    color: #0af016;
+    color: #17f06a;
     margin-bottom: 20px;
   }
   
@@ -21,7 +21,7 @@
   .contact-list li {
     margin: 15px 0;
     font-size: 1.2rem;
-    color: #0df53f;
+    color: #0df579;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +39,7 @@
   
   .contact-icon {
     font-size: 1.5rem;
-    color: #5907f1; /* Icon color */
+    color: #f10707; /* Icon color */
     margin-right: 10px;
   }
   

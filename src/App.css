@@ -1,12 +1,11 @@
+
 /* Global styles */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-image: url('https://static.vecteezy.com/system/resources/previews/013/102/567/non_2x/modern-globe-world-map-holographic-projector-on-technology-background-vector.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #8bf171;
+  background: #000000; /* Professional dark background */
+  color: #EAEAEA; /* Soft white for text */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .App {
@@ -15,11 +14,13 @@ body {
 
 /* Navbar styling */
 .nav-header {
-  background: rgba(9, 9, 12, 0.932);
-  padding: 10px;
+  background: rgb(0, 0, 0); /* Slightly transparent dark background */
+  padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-bottom: 1px solid #333;
 }
 
 .nav-header ul {
@@ -31,18 +32,38 @@ body {
 }
 
 .nav-header li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .nav-header a {
   text-decoration: none;
-  color: rgb(56, 247, 9);
-  font-size: 2rem;
-  transition: color 0.3s;
+  color: #eef1ef; /* Consistent soft white */
+  font-size: 1.5rem; /* Adjusted for a cleaner look */
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .nav-header a:hover {
-  color: #7d1cd8;
+  color: #06c750; /* Professional blue accent on hover */
+  transform: translateY(-2px);
+}
+
+.nav-header a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #f2fcfb;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-header a:hover::after {
+  width: 100%;
 }
 
 /* Profile picture styling */
@@ -51,10 +72,115 @@ body {
   height: 75px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #e271f1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #16f5a7; /* Professional blue accent */
+  box-shadow: 0 0 15px rgba(0, 168, 255, 0.5); /* Glow effect */
   margin: 20px auto;
   display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 168, 255, 0.75);
+}
+
+/* Main content container */
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* General container styling for components */
+.about-container,
+.skills-container,
+.contact-container {
+  background-color: #000000;
+  padding: 2rem;
+  border-radius: 10px; /* Slightly larger radius */
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #000000;
+  box-shadow: 0 8px 24px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover,
+.skills-container:hover,
+.contact-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+  color: #04bf55;
+  font-weight: 600;
+}
+
+a {
+  color: #00A8FF; /* Professional blue accent for links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #007BFF; /* Darker blue on hover */
+  text-decoration: none;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-item {
+  background-color: #000000;
+  padding: 1.2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #0bf6b7;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  background-color: #262323;
+}
+
+/* Contact List */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+}
+
+/* About Section */
+.about-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.about-column {
+  flex: 1;
+  min-width: 300px;
 }
 
 /* Mobile responsiveness */
@@ -71,7 +197,7 @@ body {
   }
 
   .nav-header a {
-    font-size: 1.5rem; /* Reduce font size for mobile */
+    font-size: 1.3rem; /* Adjust font size for mobile */
   }
 
   /* Profile picture on smaller screens */
@@ -90,7 +216,7 @@ body {
 
   /* Further adjust font size for very small screens */
   .nav-header a {
-    font-size: 1.2rem; /* Reduce font size */
+    font-size: 1.1rem; /* Reduce font size */
   }
 
   body {

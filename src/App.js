@@ -6,6 +6,7 @@ import Project from './components/Project';
 import Contact from './components/Contact';
 import Certificates from './components/Certificates';
 import Educationalbackground from './components/Educationalbackground';
+import LandingPage from './components/LandingPage'; // Import the new LandingPage
 import './App.css';
 
 const App = () => {
@@ -16,7 +17,8 @@ const App = () => {
         <header className="nav-header">
           <nav>
             <ul>
-              <li><Link to="/about">About</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">Dashboard</Link></li>
               <li><Link to="/skills">Skills</Link></li>
               <li><Link to="/project">Project</Link></li>
               <li><Link to="/contact">Contact</Link></li>
@@ -28,6 +30,7 @@ const App = () => {
 
         {/* Routes for Navigation */}
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/project" element={<Project />} />

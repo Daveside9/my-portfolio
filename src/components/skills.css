@@ -10,7 +10,7 @@
 /* Heading styling */
 .skills-container h2 {
   font-size: 2.5rem;
-  color: #3af70a;
+  color: #0af78c;
   margin-bottom: 20px;
 }
 
@@ -24,11 +24,11 @@
 
 /* Individual skill item styling */
 .skill-item {
-  background-color: #0a0808;
-  border: 1px solid #23f707;
+  background-color: #000000;
+  border: 1px solid #07f73f;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgb(2, 209, 71);
   text-align: center;
   color: #e7eee8;
   font-size: 1rem;
