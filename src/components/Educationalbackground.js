@@ -3,33 +3,41 @@ import './educationalbackground.css'; // Importing CSS for styling
 
 const Educationalbackground = () => {
   return (
-    <div className="educational-container">
-      <h2>Educational Background</h2>
-      <div className="educational-columns">
-        <div className="educational-column">
-          <h3>Primary School</h3>
-          <p>
-            <a href="mailto:Adakole nur/pri">Adakole nur/pri-Class 1-6</a>
-          </p>
+    <section id="education" className="education-container">
+      <div className="container">
+        <div className="section-header">
+          <h1>Educational Background</h1>
+          <p>My academic journey and qualifications</p>
         </div>
-        <div className="educational-column">
-          <h3>College</h3>
-          <p>
-            <a href="Jupavi" target="_blank" rel="noopener noreferrer">
-            Jupavi-WEAC
-            </a>
-          </p>
-        </div>
-        <div className="educational-column">
-          <h3>High School</h3>
-          <p>
-            <a href="nuba poly kaduna state, Nigeria">
-            nuba poly kaduna state, Nigeria-National Diploma in Estate Management
-            </a>
-          </p>
+        
+        <div className="educational-columns">
+          <div className="educational-column">
+            <h3>Primary School</h3>
+            <p>
+              <strong>Adakole Nur/Pri School</strong>
+              Class 1-6<br />
+              Foundation Education
+            </p>
+          </div>
+          <div className="educational-column">
+            <h3>Secondary School</h3>
+            <p>
+              <strong>Jupavi Secondary School</strong>
+              WAEC Certificate<br />
+              Completed: 2010
+            </p>
+          </div>
+          <div className="educational-column">
+            <h3>Higher Education</h3>
+            <p>
+              <strong>Nuhu Bamalli Polytechnic</strong>
+              Kaduna State, Nigeria<br />
+              National Diploma in Estate Management
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

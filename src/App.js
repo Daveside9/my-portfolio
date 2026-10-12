@@ -1,45 +1,59 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Certificates from './components/Certificates';
 import Educationalbackground from './components/Educationalbackground';
-import LandingPage from './components/LandingPage'; // Import the new LandingPage
+import Navigation from './components/Navigation';
+import ThemeToggle from './components/ThemeToggle';
+import ScrollProgress from './components/ScrollProgress';
 import './App.css';
 
 const App = () => {
-  return (
-    <Router>
-      <div className="App">
-        {/* Updated Navigation with React Router's Link */}
-        <header className="nav-header">
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">Dashboard</Link></li>
-              <li><Link to="/skills">Skills</Link></li>
-              <li><Link to="/project">Project</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/certificates">Certificates</Link></li>
-              <li><Link to="/educationalbackground">EducationalBackground</Link></li>
-            </ul>
-          </nav>
-        </header>
+  const [activeSection, setActiveSection] = useState('home');
+  const [theme, setTheme] = useState('dark');
 
-        {/* Routes for Navigation */}
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/educationalbackground" element={<Educationalbackground />} />
-        </Routes>
-      </div>
-    </Router>
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'projects', 'certificates', 'education', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
+  return (
+    <div className={`App ${theme}`}>
+      <ScrollProgress />
+      <Navigation activeSection={activeSection} />
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <Hero />
+      <About />
+      <Skills />
+      <Project />
+      <Certificates />
+      <Educationalbackground />
+      <Contact />
+    </div>
   );
 };
 

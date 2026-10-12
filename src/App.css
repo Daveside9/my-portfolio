@@ -1,130 +1,179 @@
 
-/* Global styles */
-body {
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #000000; /* Professional dark background */
-  color: #EAEAEA; /* Soft white for text */
-  transition: background-color 0.3s, color 0.3s;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Mobile-first responsive font sizes */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --accent: #ec4899;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+}
+
+/* Dark Theme */
+.App.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --border: rgba(99, 102, 241, 0.2);
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Light Theme */
+.App.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #e2e8f0;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border: rgba(99, 102, 241, 0.2);
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-primary);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .App {
-  text-align: center;
-}
-
-/* Navbar styling */
-.nav-header {
-  background: rgb(0, 0, 0); /* Slightly transparent dark background */
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  border-bottom: 1px solid #333;
-}
-
-.nav-header ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-header li {
-  margin: 0 20px;
-}
-
-.nav-header a {
-  text-decoration: none;
-  color: #eef1ef; /* Consistent soft white */
-  font-size: 1.5rem; /* Adjusted for a cleaner look */
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
-  padding-bottom: 5px;
-}
-
-.nav-header a:hover {
-  color: #06c750; /* Professional blue accent on hover */
-  transform: translateY(-2px);
-}
-
-.nav-header a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: #f2fcfb;
-  transition: all 0.3s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.nav-header a:hover::after {
+  min-height: 100vh;
   width: 100%;
+  background: var(--bg-primary);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Section styling */
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Profile picture styling */
 .profile-picture {
-  width: 75px;
-  height: 75px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #16f5a7; /* Professional blue accent */
-  box-shadow: 0 0 15px rgba(0, 168, 255, 0.5); /* Glow effect */
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 15px rgba(139, 241, 113, 0.5);
   margin: 20px auto;
   display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-picture:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(0, 168, 255, 0.75);
-}
-
-/* Main content container */
-.main-content {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(139, 241, 113, 0.75);
 }
 
 /* General container styling for components */
 .about-container,
 .skills-container,
-.contact-container {
-  background-color: #000000;
-  padding: 2rem;
-  border-radius: 10px; /* Slightly larger radius */
-  margin-top: 20px;
+.contact-container,
+.certificates-container,
+.education-container,
+.projects-container {
+  background-color: var(--bg-secondary);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
   text-align: center;
-  border: 1px solid #000000;
-  box-shadow: 0 8px 24px rgb(0, 0, 0);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-container:hover,
 .skills-container:hover,
-.contact-container:hover {
+.contact-container:hover,
+.certificates-container:hover,
+.education-container:hover,
+.projects-container:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 30px rgba(139, 241, 113, 0.2);
 }
 
 h1, h2, h3 {
-  color: #04bf55;
+  color: var(--primary);
   font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 a {
-  color: #00A8FF; /* Professional blue accent for links */
+  color: var(--primary);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #007BFF; /* Darker blue on hover */
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -132,21 +181,22 @@ a:hover {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .skill-item {
-  background-color: #000000;
-  padding: 1.2rem;
-  border-radius: 8px;
+  background-color: var(--bg-tertiary);
+  padding: 1.5rem;
+  border-radius: 12px;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  border: 1px solid #0bf6b7;
+  border: 1px solid var(--border);
 }
 
 .skill-item:hover {
   transform: scale(1.05);
-  background-color: #262323;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 8px 25px rgba(139, 241, 113, 0.2);
 }
 
 /* Contact List */
@@ -156,70 +206,85 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .contact-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  min-width: 250px;
+}
+
+.contact-list li:hover {
+  transform: translateX(10px);
+  background: var(--bg-secondary);
 }
 
 .contact-icon {
   font-size: 1.5rem;
+  color: var(--primary);
 }
 
 /* About Section */
 .about-details {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   text-align: left;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .about-column {
   flex: 1;
   min-width: 300px;
+  background: var(--bg-tertiary);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  /* Navbar styling on smaller screens */
-  .nav-header ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+  section {
+    padding: 3rem 1rem;
   }
-
-  .nav-header li {
-    margin: 10px 0;
-  }
-
-  .nav-header a {
-    font-size: 1.3rem; /* Adjust font size for mobile */
-  }
-
-  /* Profile picture on smaller screens */
+  
   .profile-picture {
-    width: 50px; /* Adjust size for mobile */
-    height: 50px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-details {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  /* Further adjust profile picture size for very small screens */
   .profile-picture {
-    width: 40px; /* Even smaller size for very small screens */
-    height: 40px;
+    width: 150px;
+    height: 150px;
   }
-
-  /* Further adjust font size for very small screens */
-  .nav-header a {
-    font-size: 1.1rem; /* Reduce font size */
+  
+  h1 {
+    font-size: 2rem;
   }
-
-  body {
-    font-size: 14px; /* Adjust font size for very small screens */
+  
+  .about-container,
+  .skills-container,
+  .contact-container,
+  .certificates-container,
+  .education-container,
+  .projects-container {
+    padding: 2rem 1rem;
   }
 }

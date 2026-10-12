@@ -3,15 +3,29 @@ import './certificates.css'; // Optional CSS for styling
 
 const Certificates = () => {
   const [openCertificate, setOpenCertificate] = useState(null);
+  const [zoomedImage, setZoomedImage] = useState(null);
 
   const toggleCertificate = (certificateName) => {
     setOpenCertificate(openCertificate === certificateName ? null : certificateName);
   };
 
+  const handleImageClick = (imageSrc) => {
+    setZoomedImage(imageSrc);
+  };
+
+  const closeZoom = () => {
+    setZoomedImage(null);
+  };
+
   return (
-    <div className="certificate-container">
-      <h2>My Certificates</h2>
-      <div className="certificate-grid">
+    <section id="certificates" className="certificates-container">
+      <div className="container">
+        <div className="section-header">
+          <h1>My Certificates</h1>
+          <p>Professional certifications and achievements</p>
+        </div>
+        
+        <div className="certificate-grid">
         {/* ALX Ventures Certificate */}
         <div className="certificate-item">
           <h3 onClick={() => toggleCertificate('alxCertificate')} className="certificate-heading">
@@ -20,9 +34,17 @@ const Certificates = () => {
           {openCertificate === 'alxCertificate' && (
             <div className="certificate-details">
               <img
-                src="https://intranet.alxswe.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBLzd3RWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f8f14362bd3c9aafcc0c8aa0d57c65b9efed8b52/50-founder-academy-certificate-joel-david.png"
+                src="/certificates/ventures_cert.png"
                 alt="ALX Ventures Certificate"
-                className="certificate-image"
+                className="certificate-image zoomable"
+                loading="lazy"
+                onClick={() => handleImageClick("/certificates/ventures_cert.png")}
+                onError={(e) => {
+                  console.error('ALX certificate failed to load locally, trying external URL');
+                  const externalUrl = "https://intranet.alxswe.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBLzd3RWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f8f14362bd3c9aafcc0c8aa0d57c65b9efed8b52/50-founder-academy-certificate-joel-david.png";
+                  e.target.src = externalUrl;
+                  e.target.onclick = () => handleImageClick(externalUrl);
+                }}
               />
             </div>
           )}
@@ -36,15 +58,38 @@ const Certificates = () => {
           {openCertificate === 'backendCertificate' && (
             <div className="certificate-details">
               <img
-                src={`${process.env.PUBLIC_URL}/certificates/backend_cer.png`} // Path to your local certificate
+                src="/certificates/backend_cer.png"
                 alt="Backend Certificate"
-                className="certificate-image"
+                className="certificate-image zoomable"
+                loading="lazy"
+                onClick={() => handleImageClick("/certificates/backend_cer.png")}
+                onError={(e) => {
+                  console.error('Backend certificate failed to load:', e.target.src);
+                }}
               />
             </div>
           )}
         </div>
+        </div>
       </div>
-    </div>
+
+      {/* Zoom Modal */}
+      {zoomedImage && (
+        <div className="zoom-overlay" onClick={closeZoom}>
+          <div className="zoom-container">
+            <img
+              src={zoomedImage}
+              alt="Zoomed Certificate"
+              className="zoomed-image"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button className="close-zoom" onClick={closeZoom}>
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
   );
 };
 
