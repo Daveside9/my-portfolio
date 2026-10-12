@@ -133,7 +133,7 @@ const Project = () => {
             <li>💰 Nigerian payment integration (Opay, PalmPay, Moniepoint)</li>
           </ul>
           <div className="tech-stack">
-            <p><strong>Tech Stack:</strong> Next.js 14, TypeScript, Tailwind CSS, FastAPI, PostgreSQL, Redis, Socket.IO, SQLAlchemy</p>
+            <p><strong>Tech Stack:</strong> React, Tailwind CSS, FastAPI, PostgreSQL, Redis, Socket.IO, SQLAlchemy</p>
           </div>
           <div className="project-highlights">
             <p><strong>Production Features:</strong></p>
