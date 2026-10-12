@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';

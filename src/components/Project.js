@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './project.css';
 import WeatherApp from './WeatherApp';
-import ImageEditor from './ImageEditor';
 import PasswordManager from '../components/PasswordManager';
-import Pairnest from '../components/Pairnest';
-import GrainPriceTracker from './grain_price_tracker';
 
 const Project = () => {
   const [openProject, setOpenProject] = useState(null);
@@ -343,14 +340,13 @@ const Project = () => {
         >
           💻 GitHub Repo
         </a>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
           className="btn demo-btn"
+          disabled
+          style={{ opacity: 0.5, cursor: 'not-allowed' }}
         >
-          ▶ Live Demo
-        </a>
+          ▶ Live Demo (Coming Soon)
+        </button>
       </div>
     </div>
   ),
